@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+<style>
+
+body{
+max-width:980px;
+background:white;
+margin:0 auto;
+}
+
+#fullcontainer{
+margin:0 auto;
+width:100%
+}
+
+header{
+max-height:10%;
+background:blue;
+border-radius: 10px 10px 0px 0px;
+margin:0 auto;
+width:100%
+padding:0;
+}
+.svg1{
+padding:0;
+margin:0 auto;
+width:100%;
+}
+svg{
+padding:0;
+margin:0;
+width:30px;
+padding:5px 0px 0px 10px;
+margin-top:10px;
+}
+circle{
+margin:0;
+}
+#secondcontainer{
+background-image:url("pozaback3.png");
+background-size:     cover;                     
+background-repeat:   no-repeat;
+background-position: center center;  
+margin:0;
+padding:0;
+width:100%;
+background-size: auto;
+}
+header2{
+width:100%;
+margin:0 auto;
+padding:0;
+}
+
+#insideheader2{
+width:65%;
+background-color: rgb(168, 217, 241, 0.8);
+padding:15px;
+margin:0 auto;
+line-height:40px;
+box-sizing: border-box;
+}
+#insideheader2 h1{
+margin:0;
+padding:0;
+margin-top:20px;
+margin-left:20px;
+}
+#insideheader2 p{
+width:90%;
+margin:0 auto;
+padding:0;
+margin-left:20px;
+}
+#backgroundmid{
+background-color:rgb(255, 255, 255, 0.8);
+width:65%;
+margin:0 auto;
+padding-top:10px;
+}
+#formid1{
+width:90%;
+margin:0 auto;
+background-color:rgb(218, 220, 222,0.5);
+padding: 10px 0px 10px 15px;
+line-height:30px;
+margin-top:10px;
+}
+#formid1 div{
+margin:0;
+padding:0;
+}
+#formid1 input{
+margin:0;
+padding:5px 10px 5px 50px;
+border:1px solid black;
+}
+#formid1 p{
+margin:0;
+padding: 5px 0px 5px 0px;
+font-size:10px;
+}
+#formid2{
+width:90%;
+margin:0 auto;
+padding: 10px 0px 10px 15px;
+line-height:30px;
+margin-top:10px;
+}
+#formid2 div{
+margin:0;
+padding:0;
+}
+#formid2 input{
+margin:0;
+padding: 5px 0px 5px 7px;
+width:18%;
+border:1px solid black;  
+}
+#formid3 ul{
+list-style-type:none;
+padding:0;
+margin:0;
+}
+#formid3{
+width:90%;
+margin:0 auto;
+padding: 10px 0px 10px 15px;
+line-height:30px;
+margin-top:10px;
+}
+#lastinput{
+width:90%;
+margin:0 auto;
+padding: 10px 0px 10px 15px;
+line-height:30px;
+margin-top:10px;
+border-top:1px solid rgb(218, 220, 222,0.5);
+}
+#lastinput input{
+padding:7px 20px 7px 20px;
+background-color:rgb(168, 217, 241, 0.8);
+border-radius:5px;
+}
+div2{
+font-size:12px;
+padding-left:5px;
+color:green;
+}
+#lastinput a{
+color:green;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+		<div id="fullcontainer">
+		
+			<header>
+				
+					<div class="svg1">
+			
+						<svg height="50" width="50">
+						
+						<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="white" />
+
+						</svg>
+							<svg height="50" width="50">
+						
+						<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="white" />
+
+						</svg>
+							<svg height="50" width="50">
+						
+						<circle cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="white" />
+
+						</svg>
+			
+					</div>
+			</header>
+			
+				
+					<div id="secondcontainer">
+					
+					
+						<header2>
+						
+							<div id="insideheader2">
+							
+								<h1> HTML Form </h1>
+								
+								
+								<p> Sign up to the newsletter form below to receive the latest news from our company. </p>
+						
+							</div>
+							
+						</header2>
+					
+					
+					
+					<section id="backgroundmid">  
+					
+					
+						<div id="formid1"> <!-- mail are backgroudn transparent mai putin fata de background -->
+						
+							<form>
+								<div><b> Email </b> </div>
+								<input type="text" name="emailadd" placeholder="Your email here...">
+								<p> We will send you an email describing how to activate your newsletter subscription.</p>
+							</form>
+					
+						</div>	
+						
+						
+						
+						
+						<div id="formid2">
+						
+							
+							<form>
+								<div><b> Name </b></div>
+								<input type="text" name="firstname" placeholder="First">
+								<input type="text" name="lastname" placeholder="Last">
+							</form>	
+								
+						</div>	
+						
+						<div id="formid3">
+						
+							
+							<form>
+								<div><b>Preferred newsletter format </b></div>
+									<ul>
+										<li><input type="radio" name="format" value="TEXT">Text<li>
+										<li><input type="radio" name="format" value="HTML">HTML<li>
+									</ul>
+							</form>
+
+						
+						</div>	
+
+
+							<div id="lastinput">
+								<div><input type="submit" value="SUBMIT"><div2> or <a href="" type="reset">Clear and start from scratch</a></div></div2>
+							</div>
+						
+							
+
+
+					<!-- la final are border -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</section>
+
+
+					</div>
+
+
+		</div>
+</body>
+</html>
