@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+	<script>
+	
+
+			function isPal(a){
+			
+				var re, tem, final = 0;
+				var tem=a;
+					while(a>0){
+					
+						re = a%10;
+						a = parseInt(a/10);
+						final = final*10+re;
+					}
+				if(final===tem){
+				
+					return true;
+				}
+				else{
+				
+					return false;
+				}
+			}
+				
+				console.log(isPal(121));
+
+				
+	</script>
+		
+	
+	
+	
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+	<script>
+	
+
+	
+				function binaryEx(arr,a){
+				
+					arr.sort((x,y)=> x-y);
+		
+					var calls = 0;
+					var high = arr.length-1;
+					var low = 0;
+					var mid = 0;
+		
+						while ( low <= high){
+							calls=calls+1;
+							mid = Math.floor((high + low)/2);
+							
+							if(arr[mid] === a){
+								
+                                console.log(calls);
+								return arr[mid];
+							
+							}else if(a>arr[mid]){
+							
+								low = mid+1;
+							}else {
+							
+								high = mid-1;
+							}		
+						}
+						
+					return -1;
+					
+	
+				}
+			
+				
+				
+						console.log(binaryEx([2,3,5,6,2,10,22,67,7,8,9],67));
+
+			
+				
+
+	</script>
+		
+	
+	
+	
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

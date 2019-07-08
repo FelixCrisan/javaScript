@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+	<script>
+	
+				function checkEven(a){
+
+					var arr=[];
+					a.sort((x, y) => x - y);
+						for (var i = 0; i<a.length; i++){
+						
+							if(a[i]%2===0){
+							arr.push(a[i]);
+							}
+							
+						}
+					
+					return arr;
+				}
+
+					console.log(checkEven([5,6,2,3,2,1,5,6,34,9]));
+				
+	</script>
+		
+	
+	
+	
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+	<script>
+	
+			
+			function lowestMult(a,b){
+			
+				var big = Math.max(a,b);
+				var small = Math.min (a,b)
+				
+					let i= big;
+					while (i%small !==0){
+						
+						i= i + big;
+					
+					}
+				
+				return i;
+				
+			
+			}
+					console.log(lowestMult(3, 9));
+	
+	</script>
+		
+	
+	
+	
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

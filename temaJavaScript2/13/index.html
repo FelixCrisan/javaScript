@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+	<script>
+	
+				function checkOddAndEven(a){
+
+					var arrEven=[];
+					var arrOdd=[];
+					
+					
+
+						for (var i = 0; i<a.length; i++){
+						
+							if(a[i]%2===0){
+							arrEven.push(a[i]);
+							arrEven.sort((x, y) => x - y);
+							}else{
+							
+							arrOdd.push(a[i]);
+							arrOdd.sort((x, y) => y - x);
+							}
+
+						}
+
+						
+					Array.prototype.push.apply(arrEven, arrOdd);
+					
+					return arrEven;
+				}
+
+					console.log(checkOddAndEven([5,6,2,3,2,1,5,6,34,9]));
+				
+	</script>
+		
+	
+	
+	
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
