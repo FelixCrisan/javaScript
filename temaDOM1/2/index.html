@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+<style>
+
+input.changecolor{
+color:green;
+}
+
+input.changesmall{
+color:red;
+}
+
+
+
+
+</style>
+
+
+
+	<script>
+	
+			function validate(shaorma,event){
+			
+			event.preventDefault();
+			
+
+				var numeInput = document.querySelector("[name='nume']");
+				var nume = numeInput.value;
+				var prenumeInput = document.querySelector("[name='prenume']");
+				var prenume = prenumeInput.value;
+				
+				var nu = nume.toString().toLowerCase();
+				var pre = prenume.toString().toLowerCase();
+				
+				var numarNu=Number(nu);
+				var numarPre=Number(pre);
+				
+				if(nu === pre && nu!=="" && pre!==""){
+					numeInput.classList.add("changecolor");
+					prenumeInput.classList.add("changecolor");
+
+				}else{
+					numeInput.classList.remove("changecolor");
+					prenumeInput.classList.remove("changecolor");
+			
+				}
+				
+				if(nu.length > pre.length || numarNu>numarPre){
+					numeInput.classList.add("changesmall");
+					prenumeInput.classList.remove("changesmall");
+
+				}else if(nu.length < pre.length || numarNu<numarPre){
+					prenumeInput.classList.add("changesmall");
+					numeInput.classList.remove("changesmall");
+				
+				}else{
+				
+					numeInput.classList.remove("changesmall");
+					prenumeInput.classList.remove("changesmall");
+				}
+
+			}
+			
+			function stergecss(){
+				var numeInput = document.querySelector("[name='nume']");
+				var nume = numeInput.value;
+				var prenumeInput = document.querySelector("[name='prenume']");
+				var prenume = prenumeInput.value;
+		
+					numeInput.classList.remove("changecolor");
+					prenumeInput.classList.remove("changecolor");
+					
+					numeInput.classList.remove("changesmall");
+					prenumeInput.classList.remove("changesmall");
+				
+			}
+			
+			
+			
+			
+			
+			
+				
+
+	</script>
+		
+	
+	
+	
+<body>
+
+	<form onsubmit="validate(this,event);">
+
+			<label>Nume: <input type="text" name="nume" oninput="stergecss()"/></label><br>
+			<label>Prenume: <input type="text" name="prenume" oninput="stergecss()" /></label><br>
+			
+			<input type="submit" value="send"/>
+
+	</form>
+
+</body>
+
+
+
+</html>

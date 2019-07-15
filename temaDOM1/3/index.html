@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+	<script>
+	
+			function validate(shaorma,event){
+			
+			event.preventDefault();
+			
+
+				var numeInput = document.querySelector("[name='nume']");
+				var nume = numeInput.value;
+				var prenumeInput = document.querySelector("[name='prenume']");
+				var prenume = prenumeInput.value;
+				
+				var adresaInput = document.querySelector("[name='adresa']");
+				var adresa = adresaInput.value;
+				
+				var nu = nume.toString().toLowerCase();
+				var pre = prenume.toString().toLowerCase();
+				
+				var numarNu=Number(nu);
+				var numarPre=Number(pre);
+				
+				if(nu.length > pre.length || numarNu>numarPre){
+
+					adresaInput.value = nu;
+
+				}else if(nu.length < pre.length || numarNu<numarPre){
+				
+					adresaInput.value = pre;
+				
+				}else{
+				
+					adresaInput.value = nu;
+				}
+
+
+
+
+
+			}
+				
+
+	</script>
+		
+	
+	
+	
+<body>
+
+	<form onsubmit="validate(this,event);">
+
+			<label>Nume: <input type="text" name="nume"/></label><br>
+			<label>Prenume: <input type="text" name="prenume"/></label><br>
+			<label>Adresa: <input type="text" name="adresa"/></label><br>
+			
+			<input type="submit" value="send"/>
+
+	</form>
+
+</body>
+
+
+
+</html>

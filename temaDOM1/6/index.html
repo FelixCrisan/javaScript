@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+<style>
+
+div{
+
+float:right;
+font-size:22px;
+height:-200px;
+
+}
+fieldset{
+margin:0 auto;
+width:900px;
+}
+
+.counter{
+color:red;
+}
+
+
+
+</style>
+
+
+
+	<script>
+	
+			function validate(shaorma,event){
+			
+			event.preventDefault();
+			
+
+				var numeInput = document.querySelector("[name='nume']");
+				var nume = numeInput.value;
+				var nu = nume.toString().toLowerCase();
+
+					
+				
+			}
+			
+
+
+
+            function ceScriu(){
+
+              var numeInput = document.querySelector("[name='nume']");
+              var nume = numeInput.value;
+              var nu = nume.toString().toLowerCase();
+              var divInput = document.querySelector("[name='divul']");
+              var div = nu.length;
+
+              document.querySelector("[name='divul']").innerHTML = div;
+
+
+
+                numeInput.onkeypress = function(){
+                if(div >9){
+                    
+                    event.preventDefault();
+
+                }else{
+
+                    divInput.classList.remove("counter");
+
+                }
+                }
+				
+				if(div<10){
+				
+					divInput.classList.remove("counter");
+				
+				}
+				
+				if(div>9){
+					document.querySelector("[name='divul']").classList.add("counter");
+				
+				
+				}
+
+            }
+			
+
+
+
+</script>
+
+
+
+	
+	
+<body>
+	<fieldset>
+	<form onsubmit="validate(this,event);">
+
+			<label>Nume: <input type="text" name="nume" oninput="ceScriu()" onkeydown="ceAmApasat()"/></label><br>
+
+			<input type="submit" value="send"/>
+			
+			<div name="divul" value=""></div>
+
+	</form>
+	</fieldset>
+</body>
+
+
+
+</html>

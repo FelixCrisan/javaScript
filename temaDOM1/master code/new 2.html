@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+<style>
+
+div{
+
+float:right;
+font-size:22px;
+height:-200px;
+
+}
+fieldset{
+margin:0 auto;
+width:900px;
+}
+
+div.counter{
+color:red;
+
+}
+
+
+</style>
+
+
+
+
+
+
+<body>
+	<fieldset>
+	<form onsubmit="">
+
+			<label>Nume: <input type="text" name="nume"/></label><br>
+
+			<input type="submit" value="send"/>
+
+			<div name="divul" value=""></div>
+
+	</form>
+	</fieldset>
+</body>
+
+
+
+<script>
+
+	function slap(e) {
+		e.preventDefault();
+		if (e.target.value.length <= 10) {
+			counter.innerHTML = e.target.value.length;
+			counter.classList.remove('counter');
+		} else {
+			counter.classList.add('counter')
+			e.target.value = e.target.value.substring(0, 10)
+		}
+	}
+
+	const counter = document.querySelector('[name="divul"]');
+	document.querySelector('[name="nume"]').addEventListener('input', slap(e));
+
+</script>
+
+</html>

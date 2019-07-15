@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+
+</head>
+
+<style>
+
+div{
+
+float:right;
+font-size:22px;
+height:-200px;
+
+}
+fieldset{
+margin:0 auto;
+width:900px;
+}
+
+
+
+</style>
+
+
+
+	<script>
+	
+			function validate(shaorma,event){
+			
+			event.preventDefault();
+			
+
+				var numeInput = document.querySelector("[name='nume']");
+				var nume = numeInput.value;
+				var nu = nume.toString().toLowerCase();
+
+					
+				
+			}
+			
+				function ceScriu(){
+				
+				  var numeInput = document.querySelector("[name='nume']");
+				  var nume = numeInput.value;
+				  var nu = nume.toString().toLowerCase();
+				  var div = nu.length;
+				  
+				  document.querySelector("[name='divul']").innerHTML = div;
+				  
+				  
+				}			
+			
+				
+
+	</script>
+		
+	
+	
+	
+<body>
+	<fieldset>
+	<form onsubmit="validate(this,event);">
+
+			<label>Nume: <input type="text" name="nume" oninput="ceScriu()"/></label><br>
+
+			<input type="submit" value="send"/>
+			
+			<div name="divul" value=""></div>
+
+	</form>
+	</fieldset>
+</body>
+
+
+
+</html>
